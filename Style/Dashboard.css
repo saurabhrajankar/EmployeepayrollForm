@@ -1,10 +1,17 @@
 .header-container {
+    /* border:solid 4px #30a70c; */
     display: flex;
     font: normal bold 22px/25px Montserrat;
     align-items: center;
-    margin-left: 170px;
+    margin-left: 85px;
     padding: 10px;
     gap: 5px;
+}
+
+.tblebody{
+    display: flex;
+    flex-direction: row;
+    background-color: white; 
 }
 
 header {
@@ -24,13 +31,17 @@ header {
 }
 
 .button{
-    border-radius: 5px; 
-    border: transparent ; 
-    color: white; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 80%; 
+    margin-left: 26px;
+    margin-right: 29px;
+    border: transparent ;
     background-color: rgba(130,167,12,255); 
-    width: 120%; 
-    height: 55%;
-    opacity: 1;
+    border-radius: 5px; 
+    /* //border: solid 2px red; */
 }
 
 .emp {
@@ -55,7 +66,7 @@ header {
 
 .sub-main-content {
     justify-content: space-between;
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     padding-bottom: 15px;
 }
@@ -65,6 +76,7 @@ header {
     font: normal normal bold 28px/25px Roboto;
     color: #42515f;
     opacity: 1;
+    margin-right: 55px;
 }
 
 .btn{
@@ -75,7 +87,7 @@ header {
 }
 .addbtn{
     height: 40px;
-    width: 150px;
+    width: 10px;
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -91,22 +103,26 @@ header {
 img{
     width: 30px;
 }
-
+/* Table Part */
 .table-main {
-    width: 80%;
+    width: 85%;
+    
     margin: 0 auto;
     overflow: auto;
 }
 
 .table {
+    /* border: solid 2px red; */
     width: 100%;
     border-collapse: separate;
     border-spacing: 0 3px;
     min-width: 800px;
-    background: #42515F 0% 0% no-repeat padding-box;
+    /* background: #42515F 0% 0% no-repeat padding-box; */
+    
 }   
 
-.th {
+th{
+    border: solid px rgb(51, 255, 0);
     padding: 5px 8px;
     background: #42515F 0% 0% no-repeat padding-box;
     height: 40px;
@@ -114,6 +130,12 @@ img{
     font: normal normal medium 18px/24px Roboto;
     color: #ffffff;
     opacity: 1;
+}
+td{
+    padding: 1px 10px;
+    font: normal normal normal 16px/21px Roboto;
+    height: px;
+    background-color: #ffffff;
 }
 .profileimgcol{
     text-align: left;
@@ -176,6 +198,12 @@ letter-spacing: 0px;
 color: #FFFFFF;
 text-transform: uppercase;
 opacity: 1;
+
+}
+.tblebody{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
 }
 .tbd{
     width: 1549px;
