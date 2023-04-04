@@ -1,44 +1,24 @@
 {
   "employees": [
     {
-      "name": "saurabh",
-      "profileUrl": "Pofile1",
+      "name": "Piyush Nimje",
+      "profileUrl": "Pofile2",
       "gender": "male",
-      "department": "HR",
-      "salary": "2",
+      "department": "Finance",
+      "salary": "30,000",
       "startDate": "1 Jan 2020",
-      "notes": "helllo",
-      "id": 1
-    },
-    {
-      "name": "saurabh",
-      "profileUrl": "Pofile1",
-      "gender": "male",
-      "department": "HR",
-      "salary": "2",
-      "startDate": "1 Jan 2020",
-      "notes": "ss",
+      "notes": "My Name Is Piyush",
       "id": 2
     },
     {
       "name": "Saurabh Rajankar",
-      "profileUrl": "Pofile2",
-      "gender": "female",
-      "department": "Sales",
-      "salary": "2",
+      "profileUrl": "Pofile1",
+      "gender": "male",
+      "department": "HR",
+      "salary": "10,000",
       "startDate": "1 Jan 2020",
-      "notes": "s",
+      "notes": "My Name is Saurabh",
       "id": 3
-    },
-    {
-      "name": "pratik",
-      "profileUrl": "Pofile2",
-      "gender": "female",
-      "department": "Sales",
-      "salary": "2",
-      "startDate": "1 Jan 2020",
-      "notes": "ddd",
-      "id": 4
     }
   ]
 }

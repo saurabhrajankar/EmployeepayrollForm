@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"> </script>
+    <link rel="stylesheet" href="../Style/EmployeeForm.css">
     <title>Document</title>
 </head>
-<link rel="stylesheet" href="../Style/EmployeeForm.css">
+
 
 <body>
     <div class="mainContainer">
@@ -58,15 +60,15 @@
                 <div class="row-content">
                     <label class="label text" for="department">Department</label>
                     <div>
-                        <input class="checkbox" type="checkbox" id="hr" name="hr" value="HR">
+                        <input class="checkbox" type="checkbox" id="hr" name="department" value="HR">
                         <label class="text" for="hr">HR</label>
-                        <input class="checkbox" type="checkbox" id="sales" name="sales" value="Sales">
+                        <input class="checkbox" type="checkbox" id="sales" name="department" value="Sales">
                         <label class="text" for="sales">Sales</label>
-                        <input class="checkbox" type="checkbox" id="finance" name="finance" value="Finance">
+                        <input class="checkbox" type="checkbox" id="finance" name="department" value="Finance">
                         <label class="text" for="finance">Finance</label>
-                        <input class="checkbox" type="checkbox" id="engineer" name="engineer" value="Engineer">
+                        <input class="checkbox" type="checkbox" id="engineer" name="department" value="Engineer">
                         <label class="text" for="engineer">Engineer</label>
-                        <input class="checkbox" type="checkbox" id="others" name="others" value="Others">
+                        <input class="checkbox" type="checkbox" id="others" name="department" value="Others">
                         <label class="text" for="others">Others</label>
                     </div>
                 </div>
@@ -75,9 +77,9 @@
                     <label class="label text" for="salary">Select Salary:</label>
                     <select id="salary" name="Salary">
                         <option value="select">Select Salary</option>
-                        <option value="1">100</option>
-                        <option value="2">200</option>
-                        <option value="3">300</option>
+                        <option value="10,000">10,000</option>
+                        <option value="20,000">20,000</option>
+                        <option value="30,000">30,000</option>
                     </select>
                 </div>
 
@@ -155,9 +157,9 @@
                 </div>
             </div>
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"> </script>
+       
         <script src="../Scripts/EmployeeForm.js"></script>
-        <script src="../Scripts/Dashboard.js"></script>
+        <!-- <script src="../Scripts/Dashboard.js"></script> -->
 
 
 </body>

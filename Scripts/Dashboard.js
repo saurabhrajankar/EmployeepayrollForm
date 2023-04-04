@@ -9,6 +9,7 @@ function showemployeedata() {
         success: function (result) {
             console.log(result);
             var object = '';
+            localStorage.setItem("id","item.id");
             $.each(result, function (index, item) {
                 object += '<tr>';
                 object += '<td>' + item.id + '</td>';
@@ -18,9 +19,8 @@ function showemployeedata() {
                 object += '<td>' + item.department + '</td>';
                 object += '<td>' + item.salary + '</td>';
                 object += '<td>' + item.startDate + '</td>';
-                object +=   '<td>' + item.notes + '</td>';
-                object += '<td><a href="#"  class="btn btn-primary" onclick="Edit(' + item.id + ')">Edit</a> || <a href="#" class="btn btn-danger" onclick="Delete(' + item.id + ')">Delete</a></td>';
-                object += '</tr>';
+                object += '<td>' + item.notes + '</td>';
+                object += '<td><a href="#" class="btn btn-danger" onClick="Delete(' + item.id + ')">Delete</a></td>';
             });
             $('#displaydata').html(object);
         },
@@ -28,29 +28,20 @@ function showemployeedata() {
             alert("Data can't get");
         }
     });
+   
 };
-/*AddEmployee*/
-function addemp() {
-    var objdata = {
-        "name" : Name,
-        "profileUrl" : radioButtons1,
-        "gender" : radioButtons2,
-        "department" : checkbox,
-        "salary" : dropdown1,
-        "startDate" : Day + ' ' + Moth + ' ' + Year,
-        "notes" : fNote,
-    }
+function Delete(id) {
     $.ajax({
-        url: 'http://localhost:3000/employees',
-        type: 'POST',    
-        dataType: 'json',
-        data: objdata,
+        url: 'http://localhost:3000/employees/' + id,
+        type: 'DELETE',
         success: function () {
-            alert('Data saved');
-            showemployeedata();
+            object.remove();
+            console.log("Data Deleted")
+           // alert('Data Deleted');
+            
         },
         error: function () {
-            alert("Data can't saved");
+            alert("Data can't Delete");
         }
-    });
-};
+    })
+}
