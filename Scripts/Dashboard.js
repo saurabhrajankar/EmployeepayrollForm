@@ -19,8 +19,9 @@ function showemployeedata() {
                 object += '<td>' + item.department + '</td>';
                 object += '<td>' + item.salary + '</td>';
                 object += '<td>' + item.startDate + '</td>';
+                object +='<td><img src="../Asset/delete-black-18dp.svg" onClick="Delete(' + item.id + ')"><img src="../Asset/create-black-18dp.svg" onClick="Edit(' + item.id + ')"></td>';
                 // object += '<td>' + item.notes + '</td>';
-                object += '<td><a href="#" class="btn btn-danger" onClick="Delete(' + item.id + ')">Delete</a><a href="#" class="btn btn-danger" onClick="Edit(' + item.id + ')">Edit</a> </td>';
+                
             });
             $('#displaydata').html(object);
         },
@@ -46,28 +47,12 @@ function Delete(id) {
         }
     })
 };
+
 function Edit(id) {
-    $.ajax({
-        url: 'http://localhost:3000/employees/' + id,
-        type: 'Get',
-        dataType: 'json',
-        success: function (responce) {
-             $('#EmpMadal').modal('show');
-            //$('#id').val(responce.id);
-            $('#name').val(responce.name);
-            $('#gender').val(responce.gender);
-            $('#Department').val(responce.department);
-            $('#Salary').val(responce.salary);
-            $('#StartDate').val(responce.startDate);
-            $('#Notes').val(responce.notes);
-           // $('#btnUpdateemp').show();
-           // $('#Heading').text('Update Details');
-        },
-        error: function () {
-            alert("Data Not found")
-        }
-    });
+    localStorage.setItem('employeedata', id);
+    window.location.href="/Templet/Update.html"
 };
 function addEmployee(){
     window.location.href="/Templet/EmployeeForm.html"
 }
+
